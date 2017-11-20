@@ -1,64 +1,47 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
-import Helmet from 'react-helmet'
+import React from "react";
+import PropTypes from "prop-types";
+import Link from "gatsby-link";
+import Helmet from "react-helmet";
 
-import './index.css'
+import "bootstrap/dist/css/bootstrap.css";
+import "../css/bootstrap-override.css";
+import "../css/bootstrap-custom-utils.css";
+import "../css/salesbury-lilac.css";
+import "./index.css";
 
-const Header = () => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          Gatsby
-        </Link>
-      </h1>
-    </div>
-  </div>
-)
+const title = "Learn React from 7 expert authors",
+    description = "",
+    image = "https://swizec.com/30/cover.jpg";
 
 const TemplateWrapper = ({ children }) => (
-  <div>
-    <Helmet
-      title="Gatsby Default Starter"
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
-    <Header />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      {children()}
+    <div>
+        <Helmet>
+            <script async src="https://gumroad.com/js/gumroad.js" />
+
+            <meta name="author" content="Swizec Teller" />
+            <meta name="description" content={title} />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+            <meta property="og:url" content="https://swizec.com/30" />
+            <meta property="og:title" content={title} />
+            <meta property="og:image" content={image} />
+            <meta property="og:description" content={description} />
+
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:site" content="@swizec" />
+            <meta name="twitter:creator" content="@swizec" />
+            <meta name="twitter:title" content={title} />
+            <meta name="twitter:description" content={description} />
+            <meta name="twitter:image" content={image} />
+
+            <title>{title}</title>
+        </Helmet>
+        {children()}
     </div>
-  </div>
-)
+);
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func,
-}
+    children: PropTypes.func
+};
 
-export default TemplateWrapper
+export default TemplateWrapper;
