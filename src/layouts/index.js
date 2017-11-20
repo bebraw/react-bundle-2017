@@ -7,14 +7,13 @@ import "bootstrap/dist/css/bootstrap.css";
 import "../css/bootstrap-override.css";
 import "../css/bootstrap-custom-utils.css";
 import "../css/salesbury-lilac.css";
-import "./index.css";
 
 const title = "Learn React from 7 expert authors",
     description = "",
     image = "https://swizec.com/30/cover.jpg";
 
 const TemplateWrapper = ({ children }) => (
-    <div>
+    <div className="cheatsheet">
         <Helmet>
             <script async src="https://gumroad.com/js/gumroad.js" />
 
