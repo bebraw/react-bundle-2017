@@ -8,7 +8,7 @@ import "../css/bootstrap-override.css";
 import "../css/bootstrap-custom-utils.css";
 import "../css/salesbury-lilac.css";
 
-const title = "Learn React from 7 expert authors",
+const title = "Learn modern webapp development from 7 expert authors",
     description = "",
     image = "https://swizec.com/30/cover.jpg";
 

@@ -2,26 +2,15 @@ import React from "react";
 import { Carousel, CarouselItem } from "react-bootstrap";
 
 const TestimonialData = {
-    crocker: {
+    ruturaj: {
         quote:
-            "Oh man, I love JavaScript, but you show me this stuff and it just doesn't look like anything I'm used to.",
-        who: "Robert Crocker, d3 meetup organizer"
+            "Hey, my friend just got a coding test and it’s in react and she has no react experience. What's the best resource to send her?",
+        who: "Ruturaj"
     },
-    tamara: {
+    dave: {
         quote:
-            "I love what you're teaching us, but I just can't wrap my head around all this weird syntax we're using.",
-        who: "Tamara, React+d3 workshop attendee"
-    },
-    timothy: {
-        quote: `I already owned your previous version and know it would be worth my money to buy the updated version.
-
-Thanks for all of the hard work!`,
-        who: "Timothy, a true fan"
-    },
-    paulo: {
-        quote:
-            "I love having practical examples to help me learn new things faster.",
-        who: "Paulo, software engineer"
+            "Your book presents a coherent, reliable workflow. Without it I'm stuck using stack overflow in a disjointed, incorrect mess. Thanks for all your efforts!",
+        who: "Dave"
     }
 };
 
