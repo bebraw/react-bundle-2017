@@ -47,41 +47,20 @@ const SalesLetter = ({ part1, part2 }) => (
     </Section>
 );
 
-const Journey = () => (
+const Journey = ({ copy }) => (
     <DarkSection>
         <a name="your-journey" />
-        <SectionTitle>Your learning journey</SectionTitle>
+        <SectionTitle>
+            Your journey from beginner to well-paid engineer
+        </SectionTitle>
         <Row>
-            <SingleColumn>
-                Basic Javascript<br />
-                - eBook: Let's Learn Coding with Modern JavaScript<br />
-                - es2017.io<br />
-                <br />
-                React Basics<br />
-                - Course: Modern React with Redux<br />
-                - React Quickly<br />
-                - Learn React and Redux from A to Z<br />
-                <br />
-                Understand your build tools:<br />
-                - SurviveJS<br />
-                <br />
-                Visualizations and 3rd party libraries<br />
-                - React + D3v4<br />
-                <br />
-                Fullstack React with Node<br />
-                - Universal Web with React<br />
-                <br />
-                React Native<br />
-                - The Complete React Native and Redux Course<br />
-                - React Native Quickly<br />
-                <br />
-                Deployment with React Native<br />
-                - Automate Your React Native Releases with Fastlane & Bitrise<br
-                />
-                <br />
-                Making money as an Engineer<br />
-                - How to Become a Professional Programmer
-            </SingleColumn>
+            <SingleColumn
+                dangerouslySetInnerHTML={{ __html: copy.html }}
+                md={8}
+            />
+        </Row>
+        <Row className="padding-big-top">
+            <BuyButton />
         </Row>
     </DarkSection>
 );
@@ -102,7 +81,8 @@ const findMarkdown = (data, name) =>
 
 const IndexPage = ({ data }) => {
     const salesletterpt1 = findMarkdown(data, "sales-letter-pt1.md"),
-        salesletterpt2 = findMarkdown(data, "sales-letter-pt2.md");
+        salesletterpt2 = findMarkdown(data, "sales-letter-pt2.md"),
+        journey = findMarkdown(data, "learning-journey.md");
 
     return (
         <div>
@@ -114,7 +94,7 @@ const IndexPage = ({ data }) => {
                 </Col>
             </LowSection>
             <SalesLetter part1={salesletterpt1} part2={salesletterpt2} />
-            <Journey />
+            <Journey copy={journey} />
             <Authors />
         </div>
     );

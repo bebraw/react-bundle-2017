@@ -1,4 +1,4 @@
-Learning how to build **modern JavaScript apps** is hard. Web or native, doesn't matter. There's just **so much you have to learn**.
+Learning the best ways to build **modern JavaScript apps** is hard. Web or native, doesn't matter. There's just **so much you have to learn**.
 
 ES6, ES6+, ES2016, 2017, why do people say JavaScript but mean ECMAScript, what's Babel, where does Webpack fit in, how do I write a function, why are for loops frowned upon but if you're using `async` and `await` suddenly they're good again, how does a fat arrow function work, what is `this`, how do I bind a callback, oh wait callbacks are bad, do I use React or Vue, where does jQuery fit in, how do I manipulate a Date, should I use TypeScript or Flow, why do I care about types anyway?, how do I separate logic from templates, what's a smart component, what does JSX do, should I use imports or requires, how much of this stuff works in the browser anyway, isn't compiling for C++, what's Redux again?
 
