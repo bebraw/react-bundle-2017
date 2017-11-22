@@ -4,11 +4,12 @@ import Link from "gatsby-link";
 import { Row, Col } from "react-bootstrap";
 import Section, {
     LowSection,
-    GreenSection,
+    DarkSection,
     SectionTitle
 } from "../components/Section";
-import { SingleColumn } from "../components/Columns";
+import { SingleColumn, WideLeftColumn } from "../components/Columns";
 import Testimonial from "../components/Testimonials";
+import BuyButton from "../components/BuyButton";
 
 const Header = () => (
     <header className="text-left container">
@@ -16,60 +17,38 @@ const Header = () => (
             <Col md={11} mdOffset={1}>
                 <h1>Level up your skills before 2017 ends</h1>
                 <p className="lead">
-                    Learn how to build modern webapps from 7 expert authors
+                    Learn how to build modern JavaScript apps from 7 expert
+                    authors
                 </p>
             </Col>
         </Row>
     </header>
 );
 
-const Why = () => (
+const SalesLetter = ({ part1, part2 }) => (
     <Section>
-        <a name="why-bundle" />
+        <a name="bundle-sales-letter" />
         <Row>
-            <SingleColumn>
-                Pain<br />
-                - stuck using stack overflow and random blogs in a disjointed,
-                incorrect mess.<br />
-                <br />
-                Dream<br />
-                - a coherent learning journey to go from beginner to
-                employable/promotable/highpaid software engineer<br />
-                <br />
-                Fix<br />
-                - our bundle<br />
-                <br />
-                Call to Action<br />
-                - $99, just this week<br />
-                <br />
-                Social Proof<br />
-                - testimonials<br />
-                - $X00,000 copies sold all together<br />
-                <br />
-                Overcome Objections<br />
-                - 110% money back guarantee (don't like it, get $110 back)<br />
-                - similar bootcamp would cost $x0,000<br />
-                - $99 is best investment you can make<br />
-                - self-paced, go as fast as you want<br />
-                - indie authors, answer questions on internets and emails<br />
-                - 7 of the best experts out there<br />
-                - combined experience of a billion years<br />
-                <br />
-                Uniqueness<br />
-                - this bundle exists only now, when it's gone it's gone<br />
-                <br />
-                Call to Action<br />
-                <br />
-                Urgency<br />
-                - sales close promptly on Friday after Thanksgiving<br />
-                - no "sorry I missed can I still get it"
-            </SingleColumn>
+            <WideLeftColumn
+                dangerouslySetInnerHTML={{ __html: part1.html }}
+                mdOffset={2}
+            />
+            <WideLeftColumn mdOffset={2}>
+                <BuyButton />
+            </WideLeftColumn>
+            <WideLeftColumn
+                dangerouslySetInnerHTML={{ __html: part2.html }}
+                mdOffset={2}
+            />
+            <WideLeftColumn mdOffset={2}>
+                <BuyButton />
+            </WideLeftColumn>
         </Row>
     </Section>
 );
 
 const Journey = () => (
-    <GreenSection>
+    <DarkSection>
         <a name="your-journey" />
         <SectionTitle>Your learning journey</SectionTitle>
         <Row>
@@ -104,21 +83,54 @@ const Journey = () => (
                 - How to Become a Professional Programmer
             </SingleColumn>
         </Row>
-    </GreenSection>
+    </DarkSection>
 );
 
-const IndexPage = () => (
-    <div>
-        <div className="bg-white-dark padding-small-top" />
-        <Header />
-        <LowSection className="padding-big-bottom">
-            <Col md={10} mdOffset={0}>
-                <Testimonial which="ruturaj" />
-            </Col>
-        </LowSection>
-        <Why />
-        <Journey />
-    </div>
+const Authors = () => (
+    <Section>
+        <a name="meet-the-authors" />
+        <SectionTitle>Meet the authors</SectionTitle>
+        <Row>
+            <SingleColumn>Here are authors</SingleColumn>
+        </Row>
+    </Section>
 );
+
+const findMarkdown = (data, name) =>
+    data.allMarkdownRemark.edges.find(({ node }) => node.id.includes(name))
+        .node;
+
+const IndexPage = ({ data }) => {
+    const salesletterpt1 = findMarkdown(data, "sales-letter-pt1.md"),
+        salesletterpt2 = findMarkdown(data, "sales-letter-pt2.md");
+
+    return (
+        <div>
+            <div className="bg-white-dark padding-small-top" />
+            <Header />
+            <LowSection className>
+                <Col md={10} mdOffset={0}>
+                    <Testimonial which="ruturaj" />
+                </Col>
+            </LowSection>
+            <SalesLetter part1={salesletterpt1} part2={salesletterpt2} />
+            <Journey />
+            <Authors />
+        </div>
+    );
+};
+
+export const query = graphql`
+    query IndexQuery {
+        allMarkdownRemark {
+            edges {
+                node {
+                    id
+                    html
+                }
+            }
+        }
+    }
+`;
 
 export default IndexPage;

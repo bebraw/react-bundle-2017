@@ -1,6 +1,8 @@
 module.exports = {
     siteMetadata: {
-        title: `Gatsby Default Starter`
+        title: `Learn how to build modern JavaScript apps from 7 expert authors`,
+        description: ``,
+        cover: `https://swizec.com/30/cover.jpg`
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
@@ -9,6 +11,14 @@ module.exports = {
             options: {
                 trackingId: "UA-1464315-25"
             }
-        }
+        },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `src`,
+                path: `${__dirname}/src/`
+            }
+        },
+        `gatsby-transformer-remark`
     ]
 };
