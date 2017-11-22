@@ -1,11 +1,11 @@
 import React from "react";
 import Countdown from "react-countdown-now";
 
-const BuyButton = () => (
+const BuyButton = ({ caption }) => (
     <div className="text-center">
         <a className="gumroad-button" href="https://gum.co/jWTRq">
             <strong style={{ color: "black" }}>
-                Level up my skills for $99 👏
+                {caption || "Level up my skills for $99 👏"}
             </strong>
         </a>
         <h3 style={{ marginTop: "10px" }}>

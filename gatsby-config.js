@@ -5,6 +5,7 @@ module.exports = {
         cover: `https://swizec.com/30/cover.jpg`
     },
     plugins: [
+        `gatsby-plugin-react-next`,
         `gatsby-plugin-react-helmet`,
         {
             resolve: `gatsby-plugin-google-analytics`,

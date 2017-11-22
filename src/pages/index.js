@@ -10,6 +10,7 @@ import Section, {
 import { SingleColumn, WideLeftColumn } from "../components/Columns";
 import Testimonial from "../components/Testimonials";
 import BuyButton from "../components/BuyButton";
+import Author, { AuthorsList } from "../components/Author";
 
 const Header = () => (
     <header className="text-left container">
@@ -32,15 +33,19 @@ const SalesLetter = ({ part1, part2 }) => (
             <WideLeftColumn
                 dangerouslySetInnerHTML={{ __html: part1.html }}
                 mdOffset={2}
+                xsOffset={1}
+                xs={11}
             />
-            <WideLeftColumn mdOffset={2}>
+            <WideLeftColumn mdOffset={2} xsOffset={1} xs={11}>
                 <BuyButton />
             </WideLeftColumn>
             <WideLeftColumn
                 dangerouslySetInnerHTML={{ __html: part2.html }}
                 mdOffset={2}
+                xsOffset={1}
+                xs={11}
             />
-            <WideLeftColumn mdOffset={2}>
+            <WideLeftColumn mdOffset={2} xsOffset={1} xs={11}>
                 <BuyButton />
             </WideLeftColumn>
         </Row>
@@ -57,6 +62,8 @@ const Journey = ({ copy }) => (
             <SingleColumn
                 dangerouslySetInnerHTML={{ __html: copy.html }}
                 md={8}
+                xsOffset={1}
+                xs={11}
             />
         </Row>
         <Row className="padding-big-top">
@@ -70,7 +77,14 @@ const Authors = () => (
         <a name="meet-the-authors" />
         <SectionTitle>Meet the authors</SectionTitle>
         <Row>
-            <SingleColumn>Here are authors</SingleColumn>
+            <SingleColumn md={10} xsOffset={1} xs={11}>
+                {AuthorsList.map(author => (
+                    <Author {...author} key={author.name} />
+                ))}
+            </SingleColumn>
+        </Row>
+        <Row className="padding-big-top">
+            <BuyButton caption="Learn from the best for $99 💪" />
         </Row>
     </Section>
 );
@@ -83,6 +97,8 @@ const IndexPage = ({ data }) => {
     const salesletterpt1 = findMarkdown(data, "sales-letter-pt1.md"),
         salesletterpt2 = findMarkdown(data, "sales-letter-pt2.md"),
         journey = findMarkdown(data, "learning-journey.md");
+
+    console.log(AuthorsList);
 
     return (
         <div>
