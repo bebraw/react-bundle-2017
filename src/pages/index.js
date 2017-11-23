@@ -9,8 +9,51 @@ import Section, {
 } from "../components/Section";
 import { SingleColumn, WideLeftColumn } from "../components/Columns";
 import Testimonial from "../components/Testimonials";
-import BuyButton from "../components/BuyButton";
+import BuyButton, { Countdown, RawBuyButton } from "../components/BuyButton";
 import Author, { AuthorsList } from "../components/Author";
+import icon from "../img/icon.gif";
+
+const AboveHeader = () => (
+    <div className="bg-white-dark padding-small-top">
+        <div class="container">
+            <Row>
+                <Col md={2} className="text-center">
+                    <img src={icon} />
+                </Col>
+                <Col
+                    md={8}
+                    className="text-center"
+                    style={{ paddingTop: "20px" }}
+                >
+                    <p
+                        style={{
+                            display: "inline-block",
+                            margin: 0,
+                            top: "-12px",
+                            position: "relative"
+                        }}
+                    >
+                        40 hours of video, 1000+ pages of expert guidance, 7
+                        authors
+                    </p>
+                    <h3
+                        style={{
+                            display: "inline",
+                            top: "-9px",
+                            position: "relative"
+                        }}
+                    >
+                        <big> 👉 $99</big>
+                    </h3>
+                    <br />
+                    <Countdown
+                        style={{ display: "inline", paddingLeft: "1em" }}
+                    />
+                </Col>
+            </Row>
+        </div>
+    </div>
+);
 
 const Header = () => (
     <header className="text-left container">
@@ -98,11 +141,9 @@ const IndexPage = ({ data }) => {
         salesletterpt2 = findMarkdown(data, "sales-letter-pt2.md"),
         journey = findMarkdown(data, "learning-journey.md");
 
-    console.log(AuthorsList);
-
     return (
         <div>
-            <div className="bg-white-dark padding-small-top" />
+            <AboveHeader />
             <Header />
             <LowSection className>
                 <Col md={10} mdOffset={0}>
