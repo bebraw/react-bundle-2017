@@ -46,7 +46,11 @@ class Countdown extends React.Component {
 }
 
 const RawBuyButton = ({ caption }) => (
-    <a className="gumroad-button" href="https://gum.co/jWTRq">
+    <a
+        className="gumroad-button"
+        href="https://gum.co/jWTRq?wanted=true"
+        data-gumroad-single="true"
+    >
         <strong style={{ color: "black" }}>
             {caption || "Level up my skills for $99 👏"}
         </strong>
@@ -56,7 +60,7 @@ const RawBuyButton = ({ caption }) => (
 const BuyButton = ({ caption }) => (
     <div className="text-center">
         <RawBuyButton caption={caption} />
-        <Countdown />
+        <Countdown style={{ marginTop: "7px" }} />
     </div>
 );
 

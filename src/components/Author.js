@@ -99,6 +99,29 @@ const AuthorsList = [
                 educating and empowering people.
             </p>
         )
+    },
+    {
+        src: require("../img/igor.jpg"),
+        name: "Igor Lamoš",
+        bio: (
+            <p>
+                Igor's passion for software development can be tracked back to
+                2000. In the past, he has been working for major media players
+                in the European market within transactional business projects in
+                insurance industry. He has gradually become an expert connecting
+                both software and insurance worlds together. A constant desire
+                for improvement led him to found his own software company -
+                BePlus. In the last years, he has been particularly interested
+                in React and React Native while leading his small team in the
+                "lead-by-example" way. Besides a few specialized apps for
+                insurance brokers, currently he is working primarily on his own
+                projects and trying to pass gained experience on to other
+                developers. He holds the rule, that the correct application of
+                appropriate technologies according to the specific use-cases
+                creates high quality software. That's what he would like to show
+                to everyone else …
+            </p>
+        )
     }
 ];
 

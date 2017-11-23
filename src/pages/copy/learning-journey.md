@@ -16,6 +16,7 @@ Don't worry, though. You don't have to go through it all. **Use as much as you w
 
 ### Understand your build tools
 - *SurviveJS - Webpack* → Learn all the ins and outs of Webpack from basic setup to advanced techniques like code splitting.
+- *SurviveJS - Maintenance* → Meant for anyone who has to develop and maintain JavaScript applications or packages. This book gathers the best development practices so you'll be able to maintain your code for a long time to come.
 
 ### Integrate 3rd party libraries
 - *React + D3v4* → Dive into 7 fun projects that build interactive visualizations, create animations, and implement fast performance with canvas. Learn everything there is to know about building beautiful apps with React.

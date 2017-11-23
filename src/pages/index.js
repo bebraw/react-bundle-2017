@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
 
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Image } from "react-bootstrap";
 import Section, {
     LowSection,
     DarkSection,
@@ -12,6 +12,8 @@ import Testimonial from "../components/Testimonials";
 import BuyButton, { Countdown, RawBuyButton } from "../components/BuyButton";
 import Author, { AuthorsList } from "../components/Author";
 import icon from "../img/icon.gif";
+import icon2 from "../img/icon2.gif";
+import cover from "../img/cover.gif";
 
 const AboveHeader = () => (
     <div className="bg-white-dark padding-small-top">
@@ -43,7 +45,16 @@ const AboveHeader = () => (
                             position: "relative"
                         }}
                     >
-                        <big> 👉 $99</big>
+                        <big>
+                            <a
+                                href="https://gum.co/jWTRq"
+                                data-gumroad-single="true"
+                                style={{ color: "black" }}
+                            >
+                                {" "}
+                                👉 $99
+                            </a>
+                        </big>
                     </h3>
                     <br />
                     <Countdown
@@ -73,6 +84,15 @@ const SalesLetter = ({ part1, part2 }) => (
     <Section>
         <a name="bundle-sales-letter" />
         <Row>
+            <WideLeftColumn mdOffset={1} style={{ marginTop: "-45px" }}>
+                <a
+                    href="https://gum.co/jWTRq"
+                    data-gumroad-single="true"
+                    style={{ color: "black" }}
+                >
+                    <Image src={cover} md={12} xs={4} />
+                </a>
+            </WideLeftColumn>
             <WideLeftColumn
                 dangerouslySetInnerHTML={{ __html: part1.html }}
                 mdOffset={2}
