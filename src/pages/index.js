@@ -17,7 +17,7 @@ import cover from "../img/cover.gif";
 
 const AboveHeader = () => (
     <div className="bg-white-dark padding-small-top">
-        <div class="container">
+        <div className="container">
             <Row>
                 <Col md={2} className="text-center">
                     <img src={icon} />
@@ -84,13 +84,13 @@ const SalesLetter = ({ part1, part2 }) => (
     <Section>
         <a name="bundle-sales-letter" />
         <Row>
-            <WideLeftColumn mdOffset={1} style={{ marginTop: "-45px" }}>
+            <WideLeftColumn mdOffset={1} style={{ marginTop: "-45px" }} md={8}>
                 <a
                     href="https://gum.co/jWTRq"
                     data-gumroad-single="true"
-                    style={{ color: "black" }}
+                    style={{ width: "100%" }}
                 >
-                    <Image src={cover} md={12} xs={4} />
+                    <Image src={cover} style={{ width: "100%" }} />
                 </a>
             </WideLeftColumn>
             <WideLeftColumn

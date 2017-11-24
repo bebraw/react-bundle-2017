@@ -6,7 +6,7 @@ const AuthorsList = [
         src: require("../img/samer.jpeg"),
         name: "Samer Buna",
         bio: [
-            <p>
+            <p key="1">
                 Samer is a polyglot coder with years of practical experience in
                 designing, implementing, and testing software, including web and
                 mobile applications development, API design, functional
@@ -14,7 +14,7 @@ const AuthorsList = [
                 scalability. He worked in several industries including real
                 estate, government, education, and publications.
             </p>,
-            <p>
+            <p key="2">
                 Samer has also authored several technical books and online
                 courses about Node.js, React.js, GraphQL, and Ruby on Rails. He
                 is passionate about everything JavaScript, and he loves
