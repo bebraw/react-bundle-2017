@@ -1,8 +1,8 @@
 module.exports = {
     siteMetadata: {
-        title: `Learn how to build modern JavaScript apps from 7 expert authors`,
-        description: ``,
-        cover: `https://bestjavascript.io/cover.gif`
+        title: `Level Up Your Skills Before 2017 Ends`,
+        description: `40 hours of video, 1000+ pages of expert guidance, 7 authors, 1 learning journey from start to employable engineer 👉 $99 just this week`,
+        cover: `https://bestjavascript.io/cover.png`
     },
     plugins: [
         `gatsby-plugin-react-next`,
