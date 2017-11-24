@@ -1,4 +1,6 @@
 exports.onClientEntry = function() {
+    console.log("HAI THERE");
+
     var _dcq = _dcq || [];
     var _dcs = _dcs || {};
     _dcs.account = "8481241";
@@ -10,5 +12,5 @@ exports.onClientEntry = function() {
         dc.src = "//tag.getdrip.com/8481241.js";
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(dc, s);
-    });
+    })();
 };

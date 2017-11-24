@@ -34,7 +34,7 @@ class Countdown extends React.Component {
                         href="https://www.getdrip.com/forms/155870127/submissions/new"
                         data-drip-show-form="155870127"
                     >
-                        Remind me 💌
+                        <small>Remind me 💌</small>
                     </a>
                 </div>
             );
