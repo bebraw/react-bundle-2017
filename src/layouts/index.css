@@ -6,7 +6,7 @@
 
 /* People don't  care about Gumroad logo or style*/
 
-div.container a.gumroad-button {
+header.text-left.container a.gumroad-button, div.container a.gumroad-button {
     background-image: none !important;
     background-repeat: no-repeat !important;
     width: 100% !important;
@@ -15,9 +15,10 @@ div.container a.gumroad-button {
     background-color: #c04355 !important;
 }
 
-div.container a.gumroad-button strong {
+header.text-left.container a.gumroad-button, div.container a.gumroad-button strong {
     color: white !important;
+    text-align: center;
 }
-div.container a.gumroad-button span.gumroad-button-logo {
+header.text-left.container a.gumroad-button span.gumroad-button-logo, div.container a.gumroad-button span.gumroad-button-logo {
   background-image: none !important;
 }
