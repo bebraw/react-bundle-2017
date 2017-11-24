@@ -111,6 +111,9 @@ const SalesLetter = ({ part1, part2 }) => (
             <WideLeftColumn mdOffset={2} xsOffset={1} xs={11}>
                 <BuyButton />
             </WideLeftColumn>
+            <Col md={10} mdOffset={0} style={{ marginTop: "2em" }}>
+                <Testimonial which="michael" />
+            </Col>
         </Row>
     </Section>
 );
@@ -166,7 +169,7 @@ const IndexPage = ({ data }) => {
         <div>
             <AboveHeader />
             <Header />
-            <LowSection className>
+            <LowSection>
                 <Col md={10} mdOffset={0}>
                     <Testimonial which="ruturaj" />
                 </Col>

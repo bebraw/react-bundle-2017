@@ -11,6 +11,11 @@ const TestimonialData = {
         quote:
             "Your book presents a coherent, reliable workflow. Without it I'm stuck using stack overflow in a disjointed, incorrect mess. Thanks for all your efforts!",
         who: "Dave"
+    },
+    michael: {
+        quote:
+            "Probably one of the best online courses to learn ReactJs. Stephen is a very good teacher, his explanations are simple and clear and the curve of difficulty of the course is coherent for effective knowledge.",
+        who: "Michaël"
     }
 };
 

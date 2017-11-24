@@ -18,11 +18,21 @@ Don't worry, though. You don't have to go through it all. **Use as much as you w
 
 ![](reactfundamentals.gif)
 
+> Excellent course that i have ever seen. Very helpful.
+> This course have actually helped me in understanding React & Redux in depth. I highly recommend this course to anyone who is looking forward to learn React & Redux.
+> I am very satisfied :)
+>
+> Harshal Hirve
+
 ### Understand your build tools
 - *SurviveJS - Webpack* → Learn all the ins and outs of Webpack from basic setup to advanced techniques like code splitting.
 - *SurviveJS - Maintenance* → Meant for anyone who has to develop and maintain JavaScript applications or packages. This book gathers the best development practices so you'll be able to maintain your code for a long time to come.
 
 ![](buildtools.gif)
+
+> Brilliant! A must have if you want to to learn webpack but also if need an updated reference guide. I always use it as a reference guide when I develop.
+> 
+> Andrea Chiumenti
 
 ### Integrate 3rd party libraries
 - *React + D3v4* → Dive into 7 fun projects that build interactive visualizations, create animations, and implement fast performance with canvas. Learn everything there is to know about building beautiful apps with React.
@@ -42,8 +52,16 @@ Don't worry, though. You don't have to go through it all. **Use as much as you w
 
 ![](reactnative.gif)
 
+> Really great course. Definitely worth it and the value I got out of it was instant. Every step is well explained and you always know why you are doing something.
+> 
+> Harris Robin Kalash
+
 ### Soft skills for engineers
 - *How to Become a Professional Programmer* → Tips and advice on your journey from a beginner programmer into a professional one.
 - *Why Programmers Work at Night* is about the flow of programming, why it's easier at night, and what programmers need to feel productive.
 
 ![](softskills.gif)
+
+> Great book. Well written and funny remarks keep you glued to it. I literally LOL'd few times :) So if you are a programmer or live with a one be sure to read this book. It will teach you some new stuff for certain.
+>
+> Danguba
