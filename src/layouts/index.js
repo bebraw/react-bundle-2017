@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "../css/bootstrap-override.css";
 import "../css/bootstrap-custom-utils.css";
 import "../css/salesbury-lilac.css";
+import "./index.css";
 
 const TemplateWrapper = ({ children, data }) => (
     <div className="cheatsheet">

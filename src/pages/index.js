@@ -124,6 +124,7 @@ const Journey = ({ copy }) => (
         <Row>
             <SingleColumn
                 dangerouslySetInnerHTML={{ __html: copy.html }}
+                className="center-images"
                 md={8}
                 xsOffset={1}
                 xs={11}

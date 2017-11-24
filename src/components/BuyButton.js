@@ -29,6 +29,13 @@ class Countdown extends React.Component {
                     <Number label="hours">{hours}</Number>
                     <Number label="mins">{minutes}</Number>
                     <Number label="secs">{seconds}</Number>
+                    <br />
+                    <a
+                        href="https://www.getdrip.com/forms/155870127/submissions/new"
+                        data-drip-show-form="155870127"
+                    >
+                        Remind me 💌
+                    </a>
                 </div>
             );
         }
